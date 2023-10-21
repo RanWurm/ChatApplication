@@ -1,0 +1,56 @@
+img {
+    width: 10%;
+    height: 10%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e2d2e;
+    margin-bottom: 20px;
+}
+
+div label {
+    font-size: 10px;
+    font-weight: solid;
+    color: #2e2d2e;
+}
+
+body {
+    background-color: rgb(105, 170, 219);
+}
+
+form {
+    font-size: medium;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    /* This ensures the form takes the full height of the viewport. */
+}
+
+#sign_up_container {
+    text-align: center;
+}
+
+#sign_up {
+    text-decoration: none;
+    /* Remove underlines */
+    color: #2e2d2e;
+    /* Set the link color */
+}
+
+#sign_up:hover {
+    text-decoration: underline;
+    /* Add underline on hover */
+    color: #2e2d2e;
+    /* Change link color on hover */
+}
