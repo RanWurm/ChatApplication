@@ -30,7 +30,7 @@
                     </div>
 
                 </div>
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" id = "login">
 
             </form>
             <div id="sign_up_container">
@@ -38,6 +38,34 @@
             </div>
         </div>
     </main>
+    
+    <script>
+ 
+        //array of users
+        const users = [];
+        //add create temp user from forms
+        const addUser = (ev) =>{
+            ev.preventDefault();
+           
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            //TODO verify function that checks if all fields are good
+            let user = {               
+                userName: username,
+                password: password
+            }
+            users.push(user);
+            //resets the form data for next user
+            document.querySelector('form').reset();
+            //add to local storage
+            localStorage.setItem('UsersList', JSON.stringify(users));
+        }
+        
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.getElementById('login').addEventListener('click', addUser);
+        })
+        
+    </script>
 </body>
 
 </html>
